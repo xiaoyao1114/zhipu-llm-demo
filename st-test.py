@@ -14,7 +14,7 @@ from langchain_core.prompts import HumanMessagePromptTemplate
 from langchain_core.prompts import ChatPromptTemplate
 
 def get_vectordb():
-    persist_directory = '../data_base/vector_db/chroma'
+    persist_directory = './data_base/vector_db/chroma'
     embedding = ZhipuAIEmbeddings()
     vectordb = Chroma(
         persist_directory=persist_directory,

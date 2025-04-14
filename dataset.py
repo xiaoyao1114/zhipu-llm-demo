@@ -12,7 +12,7 @@ def get_files():
         读取数据集
     """
     file_paths = []
-    folder_path = '../data_base/knowledge_db'
+    folder_path = './data_base/knowledge_db'
 
     if not os.path.exists(folder_path):
         print(f"指定的路径不存在: {folder_path}")
