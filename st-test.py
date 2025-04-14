@@ -13,6 +13,11 @@ from langchain_core.prompts import SystemMessagePromptTemplate
 from langchain_core.prompts import HumanMessagePromptTemplate
 from langchain_core.prompts import ChatPromptTemplate
 
+
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 def get_vectordb():
     persist_directory = 'data_base/vector_db/chroma'
     embedding = ZhipuAIEmbeddings()

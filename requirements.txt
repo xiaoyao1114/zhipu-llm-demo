@@ -7,3 +7,5 @@ python-dotenv==1.1.0
 setuptools==72.1.0
 streamlit==1.42.2
 zhipuai==2.1.5.20250410
+pysqlite3-binary
+python==3.10
