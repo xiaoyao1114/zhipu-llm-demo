@@ -5,7 +5,7 @@ _ = load_dotenv(find_dotenv())    # read local .env file
 import streamlit as st
 from zhipuai_llm import ZhipuAILLM
 from zhipuai_embedding import ZhipuAIEmbeddings
-from langchain_chroma import Chroma
+from langchain_community.vectorstores import Chroma
 
 from langchain_core.output_parsers import StrOutputParser
 
@@ -13,13 +13,8 @@ from langchain_core.prompts import SystemMessagePromptTemplate
 from langchain_core.prompts import HumanMessagePromptTemplate
 from langchain_core.prompts import ChatPromptTemplate
 
-
-# __import__('pysqlite3')
-# import sys
-# sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 def get_vectordb():
-    persist_directory = 'data_base/vector_db/chroma'
+    persist_directory = './data_base/vector_db/chroma'
     embedding = ZhipuAIEmbeddings()
     vectordb = Chroma(
         persist_directory=persist_directory,
