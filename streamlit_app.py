@@ -11,7 +11,7 @@ from langchain.chains import RetrievalQA
 import sys
 sys.path.append("data_base") # 将父目录放入系统路径中
 from zhipuai_embedding import ZhipuAIEmbeddings
-from langchain_chroma import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 
