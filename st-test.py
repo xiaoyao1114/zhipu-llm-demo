@@ -5,7 +5,7 @@ _ = load_dotenv(find_dotenv())    # read local .env file
 import streamlit as st
 from zhipuai_llm import ZhipuAILLM
 from zhipuai_embedding import ZhipuAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 
 from langchain_core.output_parsers import StrOutputParser
 
