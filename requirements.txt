@@ -285,3 +285,4 @@ jaraco.text==3.12.1
 more-itertools==10.3.0
 ordered-set==4.1.0
 typeguard==4.3.0
+sqlite3 >= 3.35.0
